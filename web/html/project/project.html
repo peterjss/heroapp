@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="NONE,NOARCHIVE" name="robots">
+
+    <link rel="stylesheet" media="screen" type="text/css" href="../../vendor/bootstrap/css/bootstrap.css">
+    <!--<link rel="stylesheet" media="screen" type="text/css" href="vendor/bootstrap/css/bootstrap-glyphicons.css">-->
+    <link rel="stylesheet" media="screen" type="text/css" href="../../vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/responsive.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/plugins.css">
+
+    <script type="text/javascript" src="../../vendor/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../../vendor/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="../../js/responsive.js"></script>
+    <script type="text/javascript" src="../../js/project/project.js"></script>
+</head>
+<body>
+<div id="top-nav" class="navbar navbar-inverse navbar-fixed-top">
+    <button class="navbar-toggle" data-target="#top-nav .nav-collapse" data-toggle="collapse" type="button">
+        <span class="icon-list"></span>
+    </button>
+
+    <a class="navbar-brand" href="#">Heroapp Peter</a>
+
+    <div class="nav-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown g-add">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
+                    <i class="icon-plus"></i>
+                    Add
+                    <span class="caret"></span>
+                </a>
+                <ul id="g-add-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
+                    <li>
+                        <a href="/reversion/version/add/"><i class="icon-plus"></i> Add Version</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
+                    <strong>Welcome, admin</strong>
+                    <span class="caret"></span>
+                </a>
+                <ul id="g-account-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
+                    <li>
+                        <a href="/account/password/"><i class="icon-key"></i></i> Change Password
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="/logout/">Log out</a>
+            </li>
+        </ul>
+        <form id="g-search" class="top-search-form navbar-form pull-left" method="get">
+            <div class="input-group">
+                <input type="text" class="form-control">
+
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon-search"></i> Search <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#"><i class="icon-search"></i> Search Bug</a></li>
+                        <li><a href="#"><i class="icon-search"></i> Search Project</a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="body-content" class="row" style="margin-left:0px;margin-right: 0px;">
+    <div id="left-side" class="col col-sm-2 col-lg-2">
+        <ul class="well nav nav-pills nav-stacked nav-sitemenu hidden-md">
+            <li>
+                <a href="/"> <i class="icon-home"></i> Home </a>
+            </li>
+
+            <li class="nav-header active"> App</li>
+            <li class="active">
+                <a href="/app/continent/"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a>
+            </li>
+            <li>
+                <a href="/app/continent/"> <i class="icon-fixed-width icon-bug"></i> Bugs</a>
+            </li>
+            <li class="nav-header active"> Auth</li>
+            <li>
+                <a href="/app/continent/"> <i class="icon-fixed-width icon-file"></i> Profile</a>
+            </li>
+            <li>
+                <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> Users</a>
+            </li>
+            <li class="nav-header active"> System</li>
+            <li>
+                <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+            </li>
+        </ul>
+
+        <ul class="well nav nav-pills nav-stacked nav-sitemenu visible-md">
+            <li class="app_menu">
+                <a href="#"><i class="icon-fixed-width icon-home"></i></a>
+            </li>
+            <li class="app_menu">
+                <a class="section dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="icon-fixed-width icon-bug"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                        <a href="/app/continent/"><i class="icon-fixed-width icon-briefcase"></i> Projects</a>
+                    </li>
+                    <li>
+                        <a href="/app/country/"><i class="icon-fixed-width icon-bug"></i> Bugs </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="app_menu">
+                <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-fixed-width icon-cog"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>
+                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-file"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-user"></i> Users</a>
+                    </li>
+                    <li>
+                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-cog"></i> Global Setting</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="content-block" class="col col-12 col-sm-10 col-lg-10">
+    <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">Projects</li>
+    </ul>
+    <div class="navbar content-navbar navbar-sm" data-class-lg="navbar content-navbar"
+         data-class-md="navbar content-navbar" data-class-sm="navbar content-navbar navbar-inverse"
+         data-toggle="breakpoint">
+        <button class="navbar-toggle nav-back" data-class-name="show_menu" data-target="#body-content"
+                data-toggle="class" type="button">
+            <i class="icon-list"></i>
+        </button>
+
+        <a class="navbar-brand" data-target="#top-nav .nav-collapse" data-toggle="collapse">
+            <i class="icon-briefcase"></i>
+            project
+        </a>
+
+        <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown bookmarks">
+                    <a id="drop-bookmark" class="dropdown-toggle" href="#" data-toggle="dropdown" role="button"
+                       title="Bookmark">
+                        <i class="icon-book"></i>
+                        Bookmark
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="bookmark-menu" class="dropdown-menu" role="menu" style="max-height: 508px;">
+                        <li>
+                            <a class="mute">No Bookmarks</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="add-bookmark">
+                            <a id="a_id_addBookmark" href="#">
+                                <i class="icon-plus"></i>
+                                New Bookmark
+                            </a>
+                            <div id="div_id_addBookmark" class="popover right">
+                                <div class="arrow"></div>
+                                <div class="popover-inner">
+                                    <h3 class="popover-title"> Save current page as Bookmark </h3>
+                                    <div class="popover-content">
+                                        <form id="bookmark_form" action="/app/continent/bookmark/" method="post">
+                                            <input type="hidden" value="jzyr1GSvTWVNPfdcdPlqY2DzXYNs9RP3" name="csrfmiddlewaretoken">
+                                            <input type="hidden" value="_cols=id.name&o=-name" name="query">
+                                            <input type="text" placeholder="Enter bookmark title…" name="title">
+                                            <button class="btn btn-success" data-loading-text="Waiting..." type="submit">Save Bookmark</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="navbar-form pull-left" method="get" action="">
+                <div class="input-group search-group">
+                    <input id="searchbar" class="form-control" type="text" placeholder="Search project" value="" name="_q_">
+                                <span class="input-group-btn">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="submit">
+                                    <i class="icon-search"></i>
+                                </button>
+                                </span>
+                </div>
+            </form>
+        </div>
+        <div class="navbar-btn pull-right">
+            <a class="btn btn-default show-sm" data-target=".content-navbar .nav-collapse" data-toggle="collapse">
+                <i class="icon-filter icon-white"></i>
+            </a>
+            <a class="btn btn-primary" href="add.html">
+                <i class="icon-plus"></i>
+                <span>Add project</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content-toolbar btn-toolbar pull-right clearfix">
+        <div class="btn-group export">
+            <a class="dropdown-toggle btn btn-default btn-small" href="#" data-toggle="dropdown">
+                <i class="icon-share"></i>
+                Export
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel" role="menu">
+                <li>
+                    <a data-target="#export-modal-xls" data-toggle="modal">
+                        <i class="icon-circle-arrow-down"></i>
+                        Export Excel
+                    </a>
+                </li>
+                <li>
+                    <a data-target="#export-modal-csv" data-toggle="modal">
+                        <i class="icon-circle-arrow-down"></i>
+                        Export CSV
+                    </a>
+                </li>
+                <li>
+                    <a data-target="#export-modal-xml" data-toggle="modal">
+                        <i class="icon-circle-arrow-down"></i>
+                        Export XML
+                    </a>
+                </li>
+                <li>
+                    <a data-target="#export-modal-json" data-toggle="modal">
+                        <i class="icon-circle-arrow-down"></i>
+                        Export JSON
+                    </a>
+                </li>
+            </ul>
+            <div id="export-modal-xls" class="modal fade" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="get">
+                            <div class="modal-header">
+                                <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                <h4 class="modal-title">Export Excel</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" value="export" name="_do_">
+                                <input type="hidden" value="xls" name="export_type">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" checked="checked" name="export_xls_header">
+                                    Export with table header.
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" name="all">
+                                    Export all datas.
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                <button class="btn btn-success" type="submit">
+                                    <i class="icon-share"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="export-modal-csv" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="get">
+                            <div class="modal-header">
+                                <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                <h4 class="modal-title">Export CSV</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" value="export" name="_do_">
+                                <input type="hidden" value="csv" name="export_type">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" checked="checked" name="export_csv_header">
+                                    Export with table header.
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" name="all">
+                                    Export all datas.
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                <button class="btn btn-success" type="submit">
+                                    <i class="icon-share"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="export-modal-xml" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="get">
+                            <div class="modal-header">
+                                <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                <h4 class="modal-title">Export XML</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" value="export" name="_do_">
+                                <input type="hidden" value="xml" name="export_type">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" checked="checked" name="export_xml_format">
+                                    Export with format.
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" name="all">
+                                    Export all datas.
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                <button class="btn btn-success" type="submit">
+                                    <i class="icon-share"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="export-modal-json" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="" method="get">
+                            <div class="modal-header">
+                                <button class="close" aria-hidden="true" data-dismiss="modal" type="button">×</button>
+                                <h4 class="modal-title">Export JSON</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" value="export" name="_do_">
+                                <input type="hidden" value="json" name="export_type">
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" checked="checked" name="export_json_format">
+                                    Export with format.
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" value="on" name="all">
+                                    Export all datas.
+                                </label>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                                <button class="btn btn-success" type="submit">
+                                    <i class="icon-share"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group">
+            <a class="dropdown-toggle btn btn-default btn-small" href="#" data-toggle="dropdown">
+                <i class="icon-list-alt"></i>
+                Columes
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu model_fields pull-right" aria-labelledby="dLabel" role="menu">
+                <li>
+                    <a href="?">
+                        <i class="icon-refresh"></i>
+                        Restore Selected
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="?_cols=id.name">
+                        <i class="icon-blank"></i>
+                        ID
+                    </a>
+                </li>
+                <li>
+                    <a href="?_cols=">
+                        <i class="icon-check"></i>
+                        name
+                    </a>
+                </li>
+                <li>
+                    <a href="?_cols=name.order">
+                        <i class="icon-blank"></i>
+                        order
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group layout-btns" data-toggle="buttons-radio">
+            <button class="btn btn-default btn-small layout-normal active" type="button">
+                <i class="icon-th-large"></i>
+            </button>
+            <button class="btn btn-default btn-small layout-condensed" type="button">
+                <i class="icon-th"></i>
+            </button>
+        </div>
+        <div class="btn-group layout-btns" data-toggle="buttons-checkbox">
+            <button class="btn btn-default btn-small layout-full" type="button">
+                <i class="icon-fullscreen"></i>
+            </button>
+        </div>
+    </div>
+    <ul class="pagination pagination-small pagination-left pagination-inline">
+        <li><span><b>1</b> project</span></li>
+    </ul>
+    <form id="changelist-form" method="post" action="">
+        <!--<input type="hidden" value="jzyr1GSvTWVNPfdcdPlqY2DzXYNs9RP3" name="csrfmiddlewaretoken">-->
+
+        <div class="results">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th class="action-checkbox-column" scope="col">
+                        <input id="action-toggle" type="checkbox">
+                    </th>
+                    <th class="sortable sorted ascending" scope="col">
+                        <div class="pull-right">
+                            <a class="toggle" href="?o=-name">
+                                <i class="icon-sort-up"></i>
+                            </a>
+                        </div>
+                        <div class="dropdown pull-left">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown"> name </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="active">
+                                    <a class="active" href="?o=name">
+                                        <i class="icon-caret-up"></i>
+                                        Sort ASC
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="active" href="?o=-name">
+                                        <i class="icon-caret-down"></i>
+                                        Sort DESC
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="active" href="?o=">
+                                        <i class="icon-remove"></i>
+                                        Cancel Sort
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="row1">
+                        <td class="action-checkbox">
+                            <input class="action-select" type="checkbox" value="4" name="_selected_action">
+                        </td>
+                        <td>
+                            <a href="/app/continent/4/update/">Koodoo</a>
+                        </td>
+                        <td>
+                            <div class="dropdown related_menu pull-right">
+                                <a class="relate_menu dropdown-toggle" data-toggle="dropdown" title="Related Objects">
+                                    <i class="icon icon-list"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="with_menu_btn">
+                                        <a title="module" href="/app/country/?_rel_continent__id__exact=4">
+                                            <i class="icon icon-th-list"></i>
+                                            module
+                                        </a>
+                                        <a class="add_link dropdown-menu-btn"
+                                           href="/app/country/add/?_rel_continent__id__exact=4">
+                                            <i class="icon icon-plus pull-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="form-actions well well-small">
+            <input id="action" type="hidden" value="" name="action">
+            <input id="select-across" type="hidden" value="0" name="select_across">
+
+            <div class="btn-group clearfix dropup">
+                <a class="dropdown-toggle btn btn-success" href="#" data-toggle="dropdown">
+                    <i class="icon-wrench icon-white"></i>
+                    <span class="action-counter">0 of 1 selected</span>
+                    <span class="all" style="display: none;">1 selected</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel" role="menu">
+                    <li>
+                        <a onclick="$.do_action('delete_selected');">
+                            <i class="icon-remove"></i>
+                            Delete selected continents
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                var _actions_icnt = "1";
+            </script>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div id="footer" class="clearfix">
+    <hr>
+    <footer class="text-center">
+        <p>&copy; my-company.inc 2013</p>
+    </footer>
+</div>
+</body>
+</html>
