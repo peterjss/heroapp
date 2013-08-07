@@ -15,138 +15,35 @@
     <link rel="stylesheet" media="screen" type="text/css" href="../../css/plugins.css">
     <link rel="stylesheet" media="screen" type="text/css" href="../../css/form.css">
 
+
     <script type="text/javascript" src="../../vendor/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../../vendor/jquery/js/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="../../vendor/jquery/js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="../../vendor/jquery/js/jquery.ui.mouse.js"></script>
+    <script type="text/javascript" src="../../vendor/jquery/js/jquery.ui.sortable.js"></script>
+
+
     <script type="text/javascript" src="../../vendor/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../../js/main.js"></script>
-    <script type="text/javascript" src="../../js/form.js"></script>
+    <script type="text/javascript" src="../../js/page.form.js"></script>
     <script type="text/javascript" src="../../js/responsive.js"></script>
+    <script type="text/javascript" src="../../js/plugin.portal.js"></script>
     <script type="text/javascript" src="../../js/project/project.js"></script>
+
 
 </head>
 <body class="app-continent change-form">
-<div id="top-nav" class="navbar navbar-inverse navbar-fixed-top">
-    <button class="navbar-toggle" data-target="#top-nav .nav-collapse" data-toggle="collapse" type="button">
-        <span class="icon-list"></span>
-    </button>
 
-    <a class="navbar-brand" href="#">Heroapp Peter</a>
-
-    <div class="nav-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-            <li class="dropdown g-add">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
-                    <i class="icon-plus"></i>
-                    Add
-                    <span class="caret"></span>
-                </a>
-                <ul id="g-add-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
-                    <li>
-                        <a href="/reversion/version/add/"><i class="icon-plus"></i> Add Version</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
-                    <strong>Welcome, admin</strong>
-                    <span class="caret"></span>
-                </a>
-                <ul id="g-account-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
-                    <li>
-                        <a href="/account/password/"><i class="icon-key"></i></i> Change Password
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="/logout/">Log out</a>
-            </li>
-        </ul>
-        <form id="g-search" class="top-search-form navbar-form pull-left" method="get">
-            <div class="input-group">
-                <input type="text" class="form-control">
-
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-search"></i> Search <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a href="#"><i class="icon-search"></i> Search Bug</a></li>
-                        <li><a href="#"><i class="icon-search"></i> Search Project</a></li>
-                    </ul>
-                </div>
-                <!-- /btn-group -->
-            </div>
-        </form>
-    </div>
-</div>
+<div id="top-nav"></div>
 
 <div id="body-content" class="row" style="margin-left:0px;margin-right: 0px;">
-    <div id="left-side" class="col col-sm-2 col-lg-2">
-        <ul class="well nav nav-pills nav-stacked nav-sitemenu hidden-md">
-            <li>
-                <a href="/"> <i class="icon-home"></i> Home </a>
-            </li>
 
-            <li class="nav-header active"> App</li>
-            <li class="active">
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a>
-            </li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-bug"></i> Bugs</a>
-            </li>
-            <li class="nav-header active"> Auth</li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-file"></i> Profile</a>
-            </li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> Users</a>
-            </li>
-            <li class="nav-header active"> System</li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> Global Setting</a>
-            </li>
-        </ul>
+    <div id="left-side" class="col col-sm-2 col-lg-2"></div>
 
-        <ul class="well nav nav-pills nav-stacked nav-sitemenu visible-md">
-            <li class="app_menu">
-                <a href="#"><i class="icon-fixed-width icon-home"></i></a>
-            </li>
-            <li class="app_menu">
-                <a class="section dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="icon-fixed-width icon-bug"></i>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li>
-                        <a href="/app/continent/"><i class="icon-fixed-width icon-briefcase"></i> Projects</a>
-                    </li>
-                    <li>
-                        <a href="/app/country/"><i class="icon-fixed-width icon-bug"></i> Bugs </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="app_menu">
-                <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon-fixed-width icon-cog"></i>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-file"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-user"></i> Users</a>
-                    </li>
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-cog"></i> Global Setting</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
     <div id="content-block" class="col col-12 col-sm-10 col-lg-10">
         <ul class="breadcrumb">
-            <li><a href="/">Home</a></li>
-            <li><a href="/html/project/project.html">Projects</a></li>
+            <li><a href="/heroapp/main.html">Home</a></li>
+            <li><a href="/heroapp/html/project/project.html">Projects</a></li>
             <li class="active"> Add project</li>
         </ul>
         <div class="navbar content-navbar navbar-sm" data-class-lg="navbar content-navbar"
@@ -288,11 +185,11 @@
             </div>
 
             <div class="form-actions well well-small">
-                <div class="btn-group clearfix visible-sm save-group col-sm-12">
-                    <button type="submit" class="default btn btn-primary col-sm-10">
+                <div class="btn-group clearfix visible-sm save-group">
+                    <button type="submit" class="default btn btn-primary col-sm col-sm-10 col-10">
                         <i class="icon-save"></i> Save
                     </button>
-                    <button type="button" class="more btn btn-primary col-sm-2" data-toggle="collapse"
+                    <button type="button" class="more btn btn-primary col-sm col-sm-2 col-2" data-toggle="collapse"
                             data-target=".nav-collapse.more-btns">
                         <i class="icon-ellipsis-vertical"></i>
                     </button>
@@ -311,11 +208,7 @@
         </div>
 </div>
 
-<div id="footer" class="clearfix">
-    <hr>
-    <footer class="text-center">
-        <p>&copy; my-company.inc 2013</p>
-    </footer>
+<div id="footer">
 </div>
 </body>
 </html>

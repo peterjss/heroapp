@@ -1,10 +1,4 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Peter
- * Date: 13-8-6
- * Time: 下午2:24
- * To change this template use File | Settings | File Templates.
- */
+
 /* include breakpoints.js
  Breakpoints.js
  version 1.0
@@ -37,8 +31,8 @@
             for (var bp in options.breakpoints.sort(function (a, b) {
                 return (b - a)
             })) {
-// fire onEnter when a browser expands into a new breakpoint
-// if in distinct mode, remove all other breakpoints first.
+                // fire onEnter when a browser expands into a new breakpoint
+                // if in distinct mode, remove all other breakpoints first.
                 if (!done && w >= options.breakpoints[bp] && lastSize < options.breakpoints[bp]) {
                     if (options.distinct) {
                         for (var x in options.breakpoints.sort(function (a, b) {
@@ -54,12 +48,12 @@
                     $('body').addClass('breakpoint-' + options.breakpoints[bp]);
                     $(window).trigger('enterBreakpoint' + options.breakpoints[bp]);
                 }
-// fire onExit when browser contracts out of a larger breakpoint
+                // fire onExit when browser contracts out of a larger breakpoint
                 if (w < options.breakpoints[bp] && lastSize >= options.breakpoints[bp]) {
                     $('body').removeClass('breakpoint-' + options.breakpoints[bp]);
                     $(window).trigger('exitBreakpoint' + options.breakpoints[bp]);
                 }
-// if in distinct mode, fire onEnter when browser contracts into a smaller breakpoint
+                // if in distinct mode, fire onEnter when browser contracts into a smaller breakpoint
                 if (
                     options.distinct && // only one breakpoint at a time
                         w >= options.breakpoints[bp] && // and we are in this one
@@ -72,7 +66,7 @@
                     $(window).trigger('enterBreakpoint' + options.breakpoints[bp]);
                 }
             }
-// set up for next call
+            // set up for next call
             if (lastSize != w) {
                 lastSize = w;
             }
@@ -92,7 +86,7 @@
         $(window).bind('exitBreakpoint768', function () {
             exitPhone();
         });
-//$(window).setBreakpoints();
+        //$(window).setBreakpoints();
         var lastMode = 'lg';
         $(window).bind('resize', function (e) {
 

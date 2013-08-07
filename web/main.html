@@ -21,124 +21,13 @@
 
 
 <body>
-<div id="top-nav" class="navbar navbar-inverse navbar-fixed-top">
-    <button class="navbar-toggle" data-target="#top-nav .nav-collapse" data-toggle="collapse" type="button">
-        <span class="icon-list"></span>
-    </button>
 
-    <a class="navbar-brand" href="#">Heroapp Peter</a>
-
-    <div class="nav-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-            <li class="dropdown g-add">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
-                    <i class="icon-plus"></i>
-                    Add
-                    <span class="caret"></span>
-                </a>
-                <ul id="g-add-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
-                    <li>
-                        <a href="/reversion/version/add/"><i class="icon-plus"></i> Add Version</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
-                    <strong>Welcome, admin</strong>
-                    <span class="caret"></span>
-                </a>
-                <ul id="g-account-menu" class="dropdown-menu" role="menu" style="max-height: 397px;">
-                    <li>
-                        <a href="/account/password/"><i class="icon-key"></i></i> Change Password
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="/logout/">Log out</a>
-            </li>
-        </ul>
-        <form id="g-search" class="top-search-form navbar-form pull-left" method="get">
-            <div class="input-group">
-                <input type="text" class="form-control">
-
-                <div class="input-group-btn">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-search"></i> Search <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a href="#"><i class="icon-search"></i> Search Bug</a></li>
-                        <li><a href="#"><i class="icon-search"></i> Search Project</a></li>
-                    </ul>
-                </div>
-                <!-- /btn-group -->
-            </div>
-        </form>
-    </div>
+<div id="top-nav">
 </div>
 
-<div id="body-content" class="row">
+<div id="body-content" class="row" style="margin-left:0;margin-right: 0;">
     <div id="left-side" class="col col-10 col-lg-2">
-        <ul class="well nav nav-pills nav-stacked nav-sitemenu hidden-md">
-            <li class="active">
-                <a href="/"> <i class="icon-home"></i> Home </a>
-            </li>
 
-            <li class="nav-header active"> App</li>
-            <li>
-                <a href="html/project/project.html"> <i class="icon-fixed-width icon-briefcase"></i> Projects</a>
-            </li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-bug"></i> Bugs</a>
-            </li>
-            <li class="nav-header active"> Auth</li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-file"></i> Profile</a>
-            </li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-user"></i> Users</a>
-            </li>
-            <li class="nav-header active"> System</li>
-            <li>
-                <a href="/app/continent/"> <i class="icon-fixed-width icon-cog"></i> Global Setting</a>
-            </li>
-        </ul>
-
-        <ul class="well nav nav-pills nav-stacked nav-sitemenu visible-md">
-            <li class="app_menu">
-                <a href="#"><i class="icon-fixed-width icon-home"></i></a>
-            </li>
-            <li class="app_menu">
-                <a class="section dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="icon-fixed-width icon-bug"></i>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li>
-                        <a href="html/project/project.html"><i class="icon-fixed-width icon-briefcase"></i> Projects</a>
-                    </li>
-                    <li>
-                        <a href="/app/country/"><i class="icon-fixed-width icon-bug"></i> Bugs </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="app_menu">
-                <a href="#" class="section dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon-fixed-width icon-cog"></i>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-file"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-user"></i> Users</a>
-                    </li>
-                    <li>
-                        <a href="/app/kitchensink/"><i class="icon-fixed-width icon-cog"></i> Global Setting</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
     </div>
     <div id="content-block" class="col col-10 col-lg-10">
         <div class="navbar content-navbar" data-class-lg="navbar content-navbar"
@@ -164,11 +53,7 @@
 </div>
 
 
-<div id="footer" class="clearfix">
-    <hr>
-    <footer class="text-center">
-        <p>&copy; my-company.inc 2013</p>
-    </footer>
+<div id="footer">
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-;(function ($) {
+(function ($) {
     $(function () {
         var action_bar = $('.form-actions');
         if (action_bar.length) {
