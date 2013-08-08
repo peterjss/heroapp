@@ -9,10 +9,10 @@
 @media (min-width: 768px) {
     .detail-modal.modal .modal-dialog{
         width: 86%;
-        margin-left: -43%;
+        /*margin-left: -43%;*/
     }
     .quick-form.modal .modal-dialog{
         width: 86%;
-        margin-left: -43%;
+        /*margin-left: -43%;*/
     }
 }

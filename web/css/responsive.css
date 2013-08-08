@@ -4,7 +4,7 @@
     }
 
     #content-block {
-        width: 91.66666666666666%;
+        /*width: 91.66666666666666%;*/
     }
 
     .col {
@@ -155,6 +155,7 @@
     .results {
         width: 100%;
         overflow-x: auto;
+        padding-bottom: 40px;
     }
 
     .form-actions {

@@ -12,7 +12,9 @@
     <link rel="stylesheet" media="screen" type="text/css" href="../../vendor/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" media="screen" type="text/css" href="../../css/main.css">
     <link rel="stylesheet" media="screen" type="text/css" href="../../css/responsive.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/form.css">
     <link rel="stylesheet" media="screen" type="text/css" href="../../css/plugins.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="../../css/widget.editable.css">
 
     <script type="text/javascript" src="../../vendor/jquery/js/jquery.js"></script>
     <script type="text/javascript" src="../../vendor/bootstrap/js/bootstrap.js"></script>
@@ -21,6 +23,8 @@
     <script type="text/javascript" src="../../js/project/project.js"></script>
     <script type="text/javascript" src="../../js/page.list.js"></script>
     <script type="text/javascript" src="../../js/plugin.actions.js"></script>
+    <script type="text/javascript" src="../../js/plugin.editable.js"></script>
+    <script type="text/javascript" src="../../js/plugin.details.js"></script>
     <script type="text/javascript" src="../../js/jsi18n.js"></script>
 </head>
 <body>
@@ -41,7 +45,7 @@
     <div id="content-block" class="col col-sm-11 col-12 col-lg-10">
         <ul class="breadcrumb">
             <li><a href="/heroapp/main.html">Home</a></li>
-            <li class="active">Projects</li>
+            <li class="active">Bugs</li>
         </ul>
         <div class="navbar content-navbar navbar-sm" data-class-lg="navbar content-navbar"
              data-class-md="navbar content-navbar" data-class-sm="navbar content-navbar navbar-inverse"
@@ -53,7 +57,7 @@
 
             <a class="navbar-brand" data-target="#top-nav .nav-collapse" data-toggle="collapse">
                 <i class="icon-briefcase"></i>
-                project
+                bug
             </a>
 
             <div class="nav-collapse collapse">
@@ -96,7 +100,7 @@
 
                 <form class="navbar-form pull-left" method="get" action="">
                     <div class="input-group search-group">
-                        <input id="searchbar" class="form-control" type="text" placeholder="Search project" value="" name="_q_">
+                        <input id="searchbar" class="form-control" type="text" placeholder="Search bug" value="" name="_q_">
                                     <span class="input-group-btn">
                                     <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="submit">
                                         <i class="icon-search"></i>
@@ -109,9 +113,9 @@
                 <a class="btn btn-default show-sm" data-target=".content-navbar .nav-collapse" data-toggle="collapse">
                     <i class="icon-filter icon-white"></i>
                 </a>
-                <a class="btn btn-primary" href="add.html">
+                <a class="btn btn-primary" href="../bug/add.html">
                     <i class="icon-plus"></i>
-                    <span>Add project</span>
+                    <span>Add bug</span>
                 </a>
             </div>
         </div>
@@ -323,9 +327,7 @@
             </div>
         </div>
         <ul class="pagination pagination-small pagination-left pagination-inline">
-            <li>
-                <span><b>1</b> project</span>
-            </li>
+            <li><span><b>1</b> bug</span></li>
         </ul>
         <form id="changelist-form" method="post" action="">
             <!--<input type="hidden" value="jzyr1GSvTWVNPfdcdPlqY2DzXYNs9RP3" name="csrfmiddlewaretoken">-->
@@ -376,8 +378,17 @@
                                 <input class="action-select" type="checkbox" value="4" name="_selected_action">
                             </td>
                             <td>
+                                <div class="btn-group pull-right">
+                                    <a class="editable-handler" data-editable-loadurl="/heroapp/data/patch_bug1.html" data-editable-field="name" title="" data-original-title="Enter name">
+                                        <i class="icon-edit"></i>
+                                    </a>
+                                    <a class="details-handler" title="Details of Test Bug1" rel="tooltip" data-edit-uri="/hosts/idc/6/update/" data-res-uri="/heroapp/data/details_bug1.html">
+                                        <i class="icon-info-sign"></i>
+                                    </a>
+                                </div>
 
-                                <a href="/app/continent/4/update/">Koodoo</a>
+                                <a href="/app/continent/4/update/">Test Bug1</a>
+
                             </td>
                             <td>
                                 <div class="dropdown related_menu pull-right">
@@ -388,7 +399,7 @@
                                         <li class="with_menu_btn">
                                             <a title="module" href="/app/module/?_rel_continent__id__exact=4">
                                                 <i class="icon icon-th-list"></i>
-                                                comment
+                                                module
                                             </a>
                                             <a class="add_link dropdown-menu-btn"
                                                href="/app/module/add/?_rel_continent__id__exact=4">
